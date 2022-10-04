@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<form class="register-form">
+    <div>
+        <label for  = "username_input">Username</label>
+        <input type ="text" id="username_input" placeholder="Enter your username">
+    </div>
+    <div>
+        <label for ="password_input">Password</label>
+        <input type ="password" id="password_input" placeholder="Enter your password">
+    </div>
+    <div>
+        <label for = "confirm_input">Confirm Password</label>
+        <input type="password" placeholder="Confirm your password" id="confirm_input">
+    </div>
+    <div>
+        <label for="email_input">Email</label>
+        <input type="email" placeholder="Type your Email" id="email_input">
+    </div>
+    <button>Register</button>
+</form>
+<table class="users-table" id="users_table">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>2222</td>
+        <td>Ayshen</td>
+        <td>Ayshen@gmail.com</td>
+    </tr>
+</table>
+<div class="flex-container">
+<div class="main-container">
+    <div class="inner-container">
+        <h2>Username:</h2>
+        <hr>
+        <p>Email:</p>
+    </div>
+</div>
+<ul class="users-ul" id="users_ul">
+    <li>User1</li>
+    <li>User2</li>
+    <li>User3</li>
+</ul>
+</div>
+
+
+
+<script src="/js/main.js"></script>    
+</body>
+</html>
