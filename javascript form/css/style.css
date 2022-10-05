@@ -50,18 +50,27 @@
     color: #fff;
 }
 
+.overflow-container
+{
+    max-height: 400px;
+    overflow: auto;
+    width: 70%;
+    margin: auto;
+}
 .users-table
 {
-    width: 70%;
-    margin: 30px auto;
+    width: 100%;
+    margin:auto;
+    background-color: rgb(13, 107, 189);
 }
 
 .users-table th
 {
     font-style: 20px;
     font-weight: 500;
-    border: 2px solid #555;
+    border: 2px solid rgb(215, 203, 203);
     padding: 8px 12px;
+    
 
 }
 
@@ -71,10 +80,92 @@
     border: 1px solid #ccc;
     padding: 5px 12px;
     text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
 
 }
 
 .users-table td:hover
 {
+    background-color: #ccc;
+    color: #fff;
+}
+
+.flex-container
+{
+    display: flex;
+    width: 85%;
+    margin: 30px auto;
+}
+
+.main-container
+{
+    width:75%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height:1000px;
+    overflow: auto;
+}
+.inner-container
+{
+    width: 49%;
+    margin: 0.5px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #256414;
     
+}
+.users-ul
+{
+    width: 25%;
+    list-style: none;
+    height:600px;
+    overflow: auto;
+}
+
+.inner-container h2
+{
+    font-size: 25px;
+    color: #256414;
+
+}
+
+.inner-container hr
+{
+   width: 75%;
+   margin: 15px  auto;
+   border: 1px solid #ccc;
+}
+
+.inner-container p
+{
+    color: #555;
+    font-size: 19px;
+
+}
+
+.users-ul li
+{
+    padding: 12px;
+    color: #fff;
+    margin: 2px;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(29, 123, 205);
+    transition: 0.4s;
+}
+
+.users-ul li:hover 
+{
+    background-color: #256414;
+}
+
+#notif_p
+{
+    font-size: 1.1rem;
+    color: rgb(219, 29, 29);
+    margin: 4px;
+    font-weight: 600;
+    display: none;
 }

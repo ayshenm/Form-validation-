@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form validation</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <form class="register-form">
@@ -25,37 +25,27 @@
         <label for="email_input">Email</label>
         <input type="email" placeholder="Type your Email" id="email_input">
     </div>
-    <button>Register</button>
+    <p id="notif_p">Notification:</p>
+    <button onClick="register()">Register</button>
 </form>
+<div class="overflow-container">
 <table class="users-table" id="users_table">
     <tr>
         <th>ID</th>
         <th>Username</th>
         <th>Email</th>
-    </tr>
-    <tr>
-        <td>2222</td>
-        <td>Ayshen</td>
-        <td>Ayshen@gmail.com</td>
-    </tr>
+    </tr> 
 </table>
+</div>
 <div class="flex-container">
 <div class="main-container">
-    <div class="inner-container">
-        <h2>Username:</h2>
-        <hr>
-        <p>Email:</p>
-    </div>
+   
 </div>
-<ul class="users-ul" id="users_ul">
-    <li>User1</li>
-    <li>User2</li>
-    <li>User3</li>
-</ul>
+<ul class="users-ul" id="users_ul"></ul>
 </div>
 
 
 
-<script src="/js/main.js"></script>    
+<script src="/javascript form/js/main.js"></script>    
 </body>
 </html>
