@@ -21,6 +21,8 @@ function register(){
 
 
    if(password == confirm){
+    ID++;
+
     var obj = {
         id:ID,
         username:username,
@@ -30,7 +32,9 @@ function register(){
     users.push(obj);
 
     
-    ID++;
+    
+    fillContent();
+    console.log(users);
 
 
    }else{
@@ -43,28 +47,31 @@ function register(){
 }
 
 function fillContent(){
-    for( let i = 0; i < users.length; i++){
+    users_table.innerHTML = "<tr><th>ID</th> <th>Username</th> <th>Email</th></tr>";
+    main_container.innerHTML = "";
+    users_ul.innerHTML = "";
+    for( var i = 0; i < users.length; i++){
         //table filling
-   var tr = users_table.insertRow(ID);
+   var tr = users_table.insertRow(users[i].ID);
    var td0 = tr.insertCell(0);
    var td1 = tr.insertCell(1);
    var td2 = tr.insertCell(2);
    
     
 
-    td0.innerText = ID;
-    td1.innerText = username;
-    td2.innerText = email; 
+    td0.innerText = users[i].id;
+    td1.innerText = users[i].username;
+    td2.innerText = users[i].email; 
 
     //main container  filling
 
     var div = document.createElement("div");
     div.className = "inner-container";
     var h2 = document.createElement("h2");
-    h2.innerText = "Username: " + username;
+    h2.innerText = "Username: " + users[i].username;
     var hr = document.createElement("hr");
     var p = document.createElement("p");
-    p.innerText = "Email: " + email;
+    p.innerText = "Email: " + users[i].email;
 
    
      div.appendChild(h2);
@@ -77,7 +84,7 @@ function fillContent(){
     //ul filling
 
     var li = document.createElement("li");
-    li.innerText = username_input.value;
+    li.innerText = users[i].username;
     users_ul.appendChild(li);
     notif_p.innerText = "Notification: successy Registered...";
     notif_p.style.display = "block";
@@ -85,3 +92,17 @@ function fillContent(){
 
     }
 }
+
+function clearItems(){
+    event.preventDefault();
+    // users_table.innerHTML = "<tr><th>ID</th> <th>Username</th> <th>Email</th></tr>";
+    // main_container.innerHTML = "";
+    // users_ul.innerHTML = "";
+
+    users = [];
+    ID = 0;
+    fillContent()
+    
+
+
+ }
