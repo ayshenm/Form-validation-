@@ -8,7 +8,7 @@ var users_ul = document.getElementById("users_ul");
 var notif_p = document.getElementById("notif_p");
 
 var ID = 0;
-
+var users = [];
 
 function register(){
 
@@ -21,11 +21,30 @@ function register(){
 
 
    if(password == confirm){
-   
+    var obj = {
+        id:ID,
+        username:username,
+        password:password,
+        email:email
+    };
+    users.push(obj);
 
     
     ID++;
-//table filling
+
+
+   }else{
+    notif_p.innerText = "Notification : Password mismatch...";
+    notif_p.style.display = "block";
+    notif_p.style.color = "red";
+   }
+
+
+}
+
+function fillContent(){
+    for( let i = 0; i < users.length; i++){
+        //table filling
    var tr = users_table.insertRow(ID);
    var td0 = tr.insertCell(0);
    var td1 = tr.insertCell(1);
@@ -64,11 +83,5 @@ function register(){
     notif_p.style.display = "block";
     notif_p.style.color = "green";
 
-   }else{
-    notif_p.innerText = "Notification : Password mismatch...";
-    notif_p.style.display = "block";
-    notif_p.style.color = "red";
-   }
-
-
+    }
 }
